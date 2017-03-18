@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
   //}
   var token;
   token = res.redirect('https://simulator-api.db.com/gw/oidc/authorize?response_type=code&client_id=24b8e99d-4c0c-4850-a069-169c6f5e810a&state=https://starthack2017.herokuapp.com/').code;
-  res.send(token);
+  //res.send(token);
   //token = res.code;
   //res.status(200).send('Done till here');
 });
