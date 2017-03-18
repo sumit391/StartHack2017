@@ -11,7 +11,7 @@ var users = require('./routes/users');
 var catalog = require('./routes/catalog'); //Import routes for "catalog" area of site
 var compression = require('compression');
 var helmet = require('helmet');
-
+var algo = require('./routes/algo');
 // Create the Express application object
 var app = express();
 
@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/catalog', catalog);  // Add catalog routes to middleware chain.
-
+app.use('/algo', algo);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
