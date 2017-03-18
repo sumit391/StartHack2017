@@ -13,9 +13,9 @@ router.get('/', function(req, res) {
   //	res.send('the access code is :' + res.param('code'));
   //}
   var token;
-  token = res.redirect('https://simulator-api.db.com/gw/oidc/authorize?response_type=code&client_id=24b8e99d-4c0c-4850-a069-169c6f5e810a&state=https://starthack2017.herokuapp.com/').code;
+  res.redirect('https://simulator-api.db.com/gw/oidc/authorize?response_type=code&client_id=24b8e99d-4c0c-4850-a069-169c6f5e810a&state=https://starthack2017.herokuapp.com/');
   //res.send(token);
-  //token = res.code;
+  token = res.code;
   //res.status(200).send('Done till here');
 });
 
